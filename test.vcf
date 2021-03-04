@@ -1,0 +1,7 @@
+##fileformat=VCFv4.3
+##FILTER=<ID=PASS,Description="All filters passed">
+##ID="The rs number assigned by SnpSift 4.3t [https://snpeff.sourceforge.net/] with dbSNP release 153 [https://www.ncbi.nlm.nih.gov/snp/]"
+##ALT=<ID=NON_REF,Description="Represents any possible alternative allele at this location">
+##reference=ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO
+chr1	1167659	rs786200938	A	G	.	PASS	
