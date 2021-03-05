@@ -6,7 +6,6 @@
 	# wgetでsoftgentics.ftpからダウンロード 一回目ログイン認証で失敗した 推定21GB、信大回線(300-500KB/s)で14時間 begin 11:40-01:30
 wget ftp://dbnsfp:dbnsfp@dbnsfp.softgenetics.com/dbNSFP4.0c.zip
 
-# Uncompress
 	# ダウンロード同様時間がかかるため、スクリプトにしておいても良いかも
 	# Files:
 		# dbNSFP4.0c_variant.chr<#>.gz      - gzipped dbNSFP variant database files by chromosomes
@@ -22,10 +21,14 @@ wget ftp://dbnsfp:dbnsfp@dbnsfp.softgenetics.com/dbNSFP4.0c.zip
 		# tryhg18.in                        - an example input file with hg18 genome positions
 		# tryhg38.in                        - an example input file with hg38 genome positions
 		# try.vcf                           - an example of vcf input file
-unzip dbNSFP4.0c.zip
 
-# bgzip uncompress 1時間かからない
-bash bgzip-uncompress.sh
+# unzip and uncompress ワンライナー
+unzip dbNSFP4.0c.zip;ls -1 *chr*gz |xargs -I {} bgzip -d -@ 4 {}
+
+	unzip dbNSFP4.0c.zip
+
+	# bgzip uncompress 1時間かからない
+	bash bgzip-uncompress.sh
 
 # Building dbNSFP for hg19 using dbNSFP 3.X
 cat dbNSFP${version}_variant.chr* | perl dbNSFP_sort.pl 7 8 > dbNSFP${version}_hg19.txt
