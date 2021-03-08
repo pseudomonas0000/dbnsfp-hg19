@@ -11,7 +11,7 @@ I provided a script that was created with the problem of insufficient memory in 
 ## Environmet
 * user/bin/bash
 * user/bin/perl
-* bgzip and tabix, snpsift
+* bgzip and tabix, snpsift (for annotation)
 Tested　on macOS Catalina (10.15.7).
 
 ## Procedure
