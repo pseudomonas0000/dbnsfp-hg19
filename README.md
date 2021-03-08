@@ -34,7 +34,7 @@ $ bash build_pipeline.sh 4.0c ./dbNSFP_sort.pl > dbNSFP4.0c_hg19
 Finally, for using `snpsift dbnsfp` command, you have to compress and indexing.
 ```console
 $ bgzip dbNSFP4.0c_hgp19
-$ tabix -s 1 -b 2 -e 2 dbNSFP4.0c_hgp19.gz
+$ tabix -s 1 -b 2 -e 2 dbNSFP4.0c_hg19.gz
 $ snpsift dbnsfp -db /path/to/bNSFP4.0c_hgp19.gz your.vcf > annotated.vcf
 ```
 
