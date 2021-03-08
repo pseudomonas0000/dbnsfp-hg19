@@ -27,6 +27,7 @@ Two command line aurgument required and an output is standard output.
 * First: dbNSFP version (e.g. 4.0c)
 * Second: full path to `the dbNSFP_sort.pl` script.
 <br>
+<br>
 ```console
 $ bash build_pipeline.sh 4.0c ./dbNSFP_sort.pl > dbNSFP4.0c_hg19
 ```
