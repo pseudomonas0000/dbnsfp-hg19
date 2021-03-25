@@ -35,7 +35,12 @@ Finally, for using `snpsift dbnsfp` command, you have to compress and indexing.
 ```console
 $ bgzip dbNSFP4.0c_hgp19
 $ tabix -s 1 -b 2 -e 2 dbNSFP4.0c_hg19.gz
-$ snpsift dbnsfp -db /path/to/bNSFP4.0c_hgp19.gz your.vcf > annotated.vcf
+```
+
+You can annotate the dbNSFP using command `snpsift dbnsfp`.<br>
+The command option required, `-db` is a path to `gz` file of converted dbNSFP, `-f` the comma-separated list of fields you want to annotate.<br>  
+```console
+$ snpsift dbnsfp -db /path/to/dbNSFP4.0c_hgp19.gz your.vcf > annotated.vcf
 ```
 
 
