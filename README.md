@@ -4,7 +4,7 @@ Coded by pseudomonas0000, 2021/3/8<br>
 Tested on macOS Catalina (10.15.7)<br>
 
 ## What's can you do with this building?
-This script can use a command `snpsift -dbnsfp` by hg19/GRCh37 genome position with a little memory.<br>
+This script can convert the dbNSFP datasets by hg19/GRCh37 genome position with a little memory.<br>
 Althout a [snpsift documentation](https://pcingola.github.io/SnpEff/ss_dbnsfp/) show a script converting hg38 to hg19 postion, the script would often stop due to lack of memory.<br>
 I provided a script that was created with the problem of insufficient memory in mind.
 
