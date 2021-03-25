@@ -38,9 +38,9 @@ $ tabix -s 1 -b 2 -e 2 dbNSFP4.0c_hg19.gz
 ```
 
 You can annotate the dbNSFP using command `snpsift dbnsfp`.<br>
-The command option required, `-db` is a path to `gz` file of converted dbNSFP, `-f` the comma-separated list of fields you want to annotate.<br>  
+The command option required, `-db` is a path to `gz` file of converted dbNSFP, `-f` the comma-separated list of specific fields you want to annotate.<br>  
 ```console
-$ snpsift dbnsfp -db /path/to/dbNSFP4.0c_hgp19.gz your.vcf > annotated.vcf
+$ snpsift dbnsfp -db /path/to/dbNSFP4.0c_hgp19.gz your.vcf -f aaref,aaalt,genename,SIFT_score,SIFT_converted_rankscore,SIFT_pred> annotated.vcf
 ```
 
 
